@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from src.gpt.gpt_config import GPTConfig
-from src.gpt.token import total_tokens_used, enforce_token_budget
+from src.gpt.token import GPT_TOKENIZER_OBJ
 from src.gpt.prompts import SYSTEM_PROMPT
 from common_util.app_constant import APP_CONSTANTS_OBJ as Constant
 
@@ -43,7 +43,7 @@ def main(user_input):
     reply = response.choices[0].message.content
     message.append({"role": "assistant", "content": reply})
 
-    enforce_token_budget(message, budget=GPTConfig.TOKEN_BUDGET)
+    GPT_TOKENIZER_OBJ.enforce_token_budget(message, budget=GPTConfig.TOKEN_BUDGET)
     return reply
 
 while True:
@@ -54,4 +54,4 @@ while True:
     answer=main(user_input)
     print("You: ", user_input)
     print("Assistant:", answer)
-    print("Total tokens used in conversation:", total_tokens_used(message))
+    print("Total tokens used in conversation:", GPT_TOKENIZER_OBJ.total_tokens_used(message))
