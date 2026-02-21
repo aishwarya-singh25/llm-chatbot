@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from src.gpt.gpt_config import GPTConfig
-from src.gpt.token import get_encoding, total_tokens_used, enforce_token_budget
+from src.gpt.token import total_tokens_used, enforce_token_budget
 from src.gpt.prompts import SYSTEM_PROMPT
 from common_util.app_constant import APP_CONSTANTS_OBJ as Constant
 
@@ -15,7 +15,6 @@ if not OPENAI_API_KEY:
 
 print("OpenAI API Key loaded successfully!")
 client = OpenAI(api_key=OPENAI_API_KEY)
-ENCODING = get_encoding()
 
 
 # import inspect, sys

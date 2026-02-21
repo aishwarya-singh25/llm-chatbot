@@ -6,7 +6,7 @@ class GPTConfig:
     TEMPERATURE = 0.7
     SYSTEM_PROMPT = "Greet user Good Morning."
     USER_PROMPT = "Please plan my day!"
-    MAX_TOKENS = 10
-    TOKEN_BUDGET = 100
+    MAX_TOKENS = 20
+    TOKEN_BUDGET = 10
 
 GPT_CONFIG_OBJ = GPTConfig()
