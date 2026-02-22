@@ -1,5 +1,5 @@
 import tiktoken
-from src.gpt.gpt_config import GPTConfig
+from common_util.gpt_config import GPTConfig
 
 class ChatGPTTokenizer:
     def __init__(self):
