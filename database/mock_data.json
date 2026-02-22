@@ -1,0 +1,17 @@
+{
+    "Sandwich": {
+        "ingredients": ["Bread", "Cheese", "Lettuce", "Tomato"],
+        "price": 5.99,
+        "spice_level": "medium"
+    },
+    "Salad": {
+        "ingredients": ["Lettuce", "Tomato", "Cucumber", "Olive Oil"],
+        "price": 4.99,
+        "spice_level": "low"
+    },
+    "Pasta": {
+        "ingredients": ["Pasta", "Tomato Sauce", "Parmesan Cheese", "Basil"],
+        "price": 7.99,
+        "spice_level": "medium"
+    }
+}
